@@ -1,0 +1,239 @@
+
+
+
+Vicon Pose is at the center of gravity of the drone, with FLU (Forward, Left, Up) axis, as well as the flight controller (DJI A3).
+
+Flight Controller Imu:
+   x: 0.0 cm
+   y: 0.0 cm
+   z: 0.0 cm
+
+   Roll:   0.0 deg 
+   Pitch:  0.0 deg
+   Yaw:    0.0 deg
+ 
+
+Realsense D435i Depth Camera (Color Camera Frame):
+   x:  8.3 cm
+   y: -3.0 cm
+   z: -4.5 cm
+
+   Roll:   0.0 deg
+   Pitch:  15.0 deg
+   Yaw:    0.0 deg
+
+
+
+
+
+1. /camera/accel/imu_info
+
+
+
+frame_id: "camera_accel_optical_frame"
+data: [1.0242207050323486, -0.0279697272926569, -0.05775934085249901, -0.034239642322063446, -0.008283891715109348, 1.0199096202850342, -0.02527705207467079, -0.34380725026130676, -0.03311058506369591, 0.015723759308457375, 1.0087034702301025, 0.22902412712574005]
+noise_variances: [0.0, 0.0, 0.0]
+bias_variances: [0.0, 0.0, 0.0]
+---
+
+
+
+2.  /camera/accel/sample
+
+header: 
+  seq: 39618
+  stamp: 
+    secs: 1625141689
+    nsecs: 192274570
+  frame_id: "camera_accel_optical_frame"
+orientation: 
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 0.0
+orientation_covariance: [-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+angular_velocity: 
+  x: 0.0
+  y: 0.0
+  z: 0.0
+angular_velocity_covariance: [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+linear_acceleration: 
+  x: xxx
+  y: xxx
+  z: xxx
+linear_acceleration_covariance: [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+
+
+
+FREQ = 250 HZ
+
+
+3.  /camera/color/camera_info
+
+
+  seq: 
+  stamp: 
+    secs: 
+    nsecs:  
+  frame_id: "camera_color_optical_frame"
+height: 480
+width: 640
+distortion_model: "plumb_bob"
+D: [0.0, 0.0, 0.0, 0.0, 0.0]
+K: [611.9695434570312, 0.0, 318.71343994140625, 0.0, 612.0466918945312, 237.70240783691406, 0.0, 0.0, 1.0]
+R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+P: [611.9695434570312, 0.0, 318.71343994140625, 0.0, 0.0, 612.0466918945312, 237.70240783691406, 0.0, 0.0, 0.0, 1.0, 0.0]
+binning_x: 0
+binning_y: 0
+roi: 
+  x_offset: 0
+  y_offset: 0
+  height: 0
+  width: 0
+  do_rectify: False
+
+
+4.  /camera/color/image_raw/compressed 
+
+(check if cam params need to be changed)
+
+
+
+5. /camera/depth/camera_info
+
+  seq: 
+  stamp: 
+    secs: 
+    nsecs: 
+  frame_id: "camera_depth_optical_frame"
+height: 480
+width: 640
+distortion_model: "plumb_bob"
+D: [0.0, 0.0, 0.0, 0.0, 0.0]
+K: [391.7041931152344, 0.0, 317.6928405761719, 0.0, 391.7041931152344, 239.3055419921875, 0.0, 0.0, 1.0]
+R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+P: [391.7041931152344, 0.0, 317.6928405761719, 0.0, 0.0, 391.7041931152344, 239.3055419921875, 0.0, 0.0, 0.0, 1.0, 0.0]
+binning_x: 0
+binning_y: 0
+roi: 
+  x_offset: 0
+  y_offset: 0
+  height: 0
+  width: 0
+  do_rectify: False
+---
+
+FPS 
+
+6. /camera/depth/image_rect_raw 
+
+
+7. /camera/gyro/imu_info
+
+frame_id: "camera_gyro_optical_frame"
+data: [1.0, 0.0, 0.0, -7.481228385586292e-05, 0.0, 1.0, 0.0, -8.265458018286154e-05, 0.0, 0.0, 1.0, -5.186806447454728e-06]
+noise_variances: [0.0, 0.0, 0.0]
+bias_variances: [0.0, 0.0, 0.0]
+---
+
+
+8. /camera/gyro/sample
+
+header: 
+  seq: 
+  stamp: 
+    secs: 
+    nsecs: 
+  frame_id: "camera_gyro_optical_frame"
+orientation: 
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 0.0
+orientation_covariance: [-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+angular_velocity: 
+  x: xxx
+  y: xxx
+  z: xxx
+angular_velocity_covariance: [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+linear_acceleration: 
+  x: 0.0
+  y: 0.0
+  z: 0.0
+linear_acceleration_covariance: [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+---
+
+
+
+9. /clock empty
+
+
+
+10. /dji_sdk/imu
+
+
+
+
+
+header: 
+  seq: 54155
+  stamp: 
+    secs: 1625141641
+    nsecs: 697327373
+  frame_id: "body_FLU"
+orientation: 
+  x: 0.006554444261096775
+  y: 0.0060408388526297565
+  z: 0.6354211237058618
+  w: 0.7721143329033366
+orientation_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+angular_velocity: 
+  x: -0.24740919470787048
+  y: -0.04300524294376373
+  z: -0.08563500642776489
+angular_velocity_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+linear_acceleration: 
+  x: 0.08444999313075095
+  y: -0.08972924670763315
+  z: 9.849132180690766
+linear_acceleration_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+---
+
+
+
+
+11 . /vicon_client/METRICS/pose
+
+
+
+header: 
+  seq: 10908
+  stamp: 
+    secs: 1625141640
+    nsecs: 472543290
+  frame_id: "vicon"
+pose: 
+  position: 
+    x: -1.9445415545748357
+    y: 2.7558320296399237
+    z: 0.733626862173864
+  orientation: 
+    x: 0.002443899746016249
+    y: 0.015617342532193884
+    z: 0.7200511946301159
+    w: 0.6937408760322594
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
