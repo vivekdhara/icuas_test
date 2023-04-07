@@ -4,6 +4,6 @@
 
 2. ORB txt file is saved from rosservice call rosservice call /orb_slam3/save_traj abbc.txt
 
-3. Having 3(ground truth) + 1 (ORB) txt files. Run Graph.py - with transformations
+3. Run graph.py - (with transformations), after step1,2
 
-4. Current txt files are for rgbd, launch, config file I used are in the folder launch
+4. Current txt files are for rgbd. Used launch and config file are given
